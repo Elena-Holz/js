@@ -12,7 +12,7 @@
 
 // const adress = `Пани ${fullName} живет по адресу ${street} ${house} ${flat}`;
 // console.log(adress);
-<<<<<<< HEAD
+
 
 // // const ticket = 10;
 // // const order = `Вы заказали ${ticket} билетов`;
@@ -241,7 +241,7 @@
 // atTheOldToad.removePotion("Dragon breath");
 // console.log(atTheOldToad.removePotion("Dragon breath"));
 
-=======
+
 
 // const ticket = 10;
 // const order = `Вы заказали ${ticket} билетов`;
@@ -258,11 +258,11 @@
 
 // var arr = stringToarray(str);
 // console.log(arr)
-// document.writeln(arr); 
+// document.writeln(arr);
 
 //**** */
-//  Напишите функцию insert_dash(str), которая принимает строку str в качестве аргумента и 
-// вставляет тире (-) между словами. 
+//  Напишите функцию insert_dash(str), которая принимает строку str в качестве аргумента и
+// вставляет тире (-) между словами.
 // При этом все символы строки необходимо перевести в верхний регистр.
 
 // var str = "HTML JavaScript PHP";
@@ -291,22 +291,81 @@
 // console.log(arr1);
 
 // ******
-// Напишите код, который преобразовывает и объединяет все элементы массива в одно строковое значение. 
+// Напишите код, который преобразовывает и объединяет все элементы массива в одно строковое значение.
 // Элементы массива будут разделены запятой. Получите результат двумя разными методами.
 
 
-var vegetables = ['Капуста', 'Репа', 'Редиска', 'Морковка'];
-function stringVed(vegetables) {
-return vegetables.toString()
+// var vegetables = ['Капуста', 'Репа', 'Редиска', 'Морковка'];
+// function stringVed(vegetables) {
+// return vegetables.toString()
+// }
+
+// function stringVed1(vegetables) {
+//     return vegetables.join(",")
+// }
+// let str1 = stringVed(vegetables);
+// let str2 = stringVed1(vegetables);
+// document.writeln(str1); // "Капуста, Репа, Редиска, Морковка"
+// console.log(str1);
+// document.writeln(str2);
+// console.log(str2);
+
+
+/** */
+// Пользователь вводит строку кириллицей разного регистра. Напишите функцию, которая принимает строку в качестве аргумента
+// и заменяет регистр каждого символа на противоположный. Например, если вводится «КаЖдЫй ОхОтНиК», то на выходе должен быть массив [кАжДыЙ оХоТнИк].
+
+// const str = prompt('Введите слово', 'КаЖдЫй ОхОтНиК');
+// function changeRegister (str) {
+// let UPPER = 'АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ';
+// let LOWER = 'абвгдеёжзийклмнопрстуфхцчшщъыьэюя';
+// let result = [];
+  
+//   for(var i=0; i<str.length; i++) {
+//     if(UPPER.includes(str[i])) {
+//       result.push(str[i].toLowerCase());
+//     }
+//     else if(LOWER.includes(str[i])) {
+//       result.push(str[i].toUpperCase());
+//     }
+//     else {
+//       result.push(str[i]);
+//     }
+//   }
+//   return result.join('');
+// };
+// document.writeln(changeRegister(str));
+
+/** */
+// Удалить повторяющиеся элементы массива
+// Напишите функцию removeDuplicates(arr), которая возвращает массив, в котором удалены повторяющиеся
+//  элементы из массива arr(игнорируйте чувствительность к регистру).
+
+// var arr = ["php", "php", "css", "css",
+//   "script", "script", "html", "html", "java"
+// ];
+
+// function result(arr) {
+
+//     return arr.filter((el, index, array) =>
+//        array.indexOf(el) === index);
+// };
+
+// console.log(result(arr));
+/***** */
+  // Високосным годом является каждый четвертый год и века начинаются только на высокостные года,
+  // отличие високосного года от обычного заключается в появлении 366 - го дня.Напишите функцию chooseYears(start, end),
+  // которая принимает в качестве аргументов диапозон лет и возвращает массив високосных лет в заданном диапазоне.
+
+
+  function chooseYears(start, end) {
+    let arr = [];
+    for (let i = start; i <= end; i += 1) {
+      arr.push(i);
+    }
+    return arr.filter((el, array) => el % 4 === 0 || el % 100 === 0);
+
 }
 
-function stringVed1(vegetables) {
-    return vegetables.join(",")
-}
-let str1 = stringVed(vegetables);
-let str2 = stringVed1(vegetables);
-document.writeln(str1); // "Капуста, Репа, Редиска, Морковка"
-console.log(str1)
-document.writeln(str2); 
-console.log(str2)
->>>>>>> 341bdbeeccacc4071c9c79ae0085c894057272f6
+console.log(chooseYears(2000, 2018));
+
